@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Grunge: El Sonido de Seattle | Rock Verse</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
+    <header>
+        <nav>
+            <div class="logo">ROCK<span>VERSE</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Categorías ▼</a>
+                    <ul class="dropdown-content">
+                        <li><a href="thrash.html">Thrash Metal</a></li>
+                        <li><a href="power.html">Power Metal</a></li>
+                        <li><a href="deathcore.html">Deathcore</a></li>
+                        <li><a href="grunge.html">Grunge</a></li>
+                        <li><a href="progresivo.html">Metal Progresivo</a></li>
+                    </ul>
+                </li>
+                <li><a href="historia.html">Historia</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <header class="category-header">
             <h1>Grunge: El Legado de los 90</h1>
@@ -16,12 +38,14 @@
             <div class="band-card">
                 <span class="band-badge">Activos</span>
                 <div class="band-image-container">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Pearl_Jam_-_Global_Citizen_Festival_2015_02.jpg/800px-Pearl_Jam.jpg" alt="Pearl Jam">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Pearl_Jam_-_Global_Citizen_Festival_2015_02.jpg/800px-Pearl_Jam.jpg"
+                        alt="Pearl Jam">
                 </div>
                 <div class="band-details">
                     <h3>Pearl Jam</h3>
                     <p class="band-origin">🇺🇸 Seattle</p>
-                    <p>Eddie Vedder y compañía siguen llenando estadios en 2026 con su mezcla única de rock y activismo.</p>
+                    <p>Eddie Vedder y compañía siguen llenando estadios en 2026 con su mezcla única de rock y activismo.
+                    </p>
                     <div class="band-key-song"><strong>Esencial:</strong> Alive</div>
                 </div>
             </div>
@@ -29,7 +53,8 @@
             <div class="band-card">
                 <span class="band-badge">En Gira</span>
                 <div class="band-image-container">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Alice_in_Chains_2013_02.jpg/800px-AIC.jpg" alt="Alice in Chains">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Alice_in_Chains_2013_02.jpg/800px-AIC.jpg"
+                        alt="Alice in Chains">
                 </div>
                 <div class="band-details">
                     <h3>Alice in Chains</h3>
@@ -42,41 +67,46 @@
             <div class="band-card">
                 <span class="band-badge">Inmortales</span>
                 <div class="band-image-container">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Nirvana_around_1992.jpg/800px-Nirvana.jpg" alt="Nirvana">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Nirvana_around_1992.jpg/800px-Nirvana.jpg"
+                        alt="Nirvana">
                 </div>
                 <div class="band-details">
                     <h3>Nirvana</h3>
                     <p class="band-origin">🇺🇸 Seattle</p>
-                    <p>La banda que cambió el curso de la música. En 2026 se lanzará una edición inédita por el 35 aniversario de Nevermind.</p>
+                    <p>La banda que cambió el curso de la música. En 2026 se lanzará una edición inédita por el 35
+                        aniversario de Nevermind.</p>
                     <div class="band-key-song"><strong>Esencial:</strong> Smells Like Teen Spirit</div>
                 </div>
             </div>
         </section>
     </main>
     <footer>
-    <p>&copy; 2026 Rock Verse | <a href="privacidad.html" style="color:#aaa; text-decoration:none;">Política de Privacidad</a></p>
-</footer>
-<div id="cookie-banner" class="cookie-container">
-    <p>
-        Utilizamos cookies propias y de terceros para mejorar tu experiencia y mostrarte publicidad relacionada con tus gustos rockeros. 
-        Al continuar navegando, aceptas nuestra <a href="privacidad.html">Política de Cookies</a>.
-    </p>
-    <button id="accept-cookies" class="cookie-btn">Aceptar y Rockear</button>
-</div>
+        <p>&copy; 2026 Rock Verse | <a href="privacidad.html" style="color:#aaa; text-decoration:none;">Política de
+                Privacidad</a></p>
+    </footer>
+    <div id="cookie-banner" class="cookie-container">
+        <p>
+            Utilizamos cookies propias y de terceros para mejorar tu experiencia y mostrarte publicidad relacionada con
+            tus gustos rockeros.
+            Al continuar navegando, aceptas nuestra <a href="privacidad.html">Política de Cookies</a>.
+        </p>
+        <button id="accept-cookies" class="cookie-btn">Aceptar y Rockear</button>
+    </div>
 
-<script>
-    const banner = document.getElementById('cookie-banner');
-    const btn = document.getElementById('accept-cookies');
+    <script>
+        const banner = document.getElementById('cookie-banner');
+        const btn = document.getElementById('accept-cookies');
 
-    // Verificar si el usuario ya aceptó las cookies antes
-    if (!localStorage.getItem('cookies-aceptadas')) {
-        banner.classList.add('active');
-    }
+        // Verificar si el usuario ya aceptó las cookies antes
+        if (!localStorage.getItem('cookies-aceptadas')) {
+            banner.classList.add('active');
+        }
 
-    btn.addEventListener('click', () => {
-        localStorage.setItem('cookies-aceptadas', 'true');
-        banner.classList.remove('active');
-    });
-</script>
+        btn.addEventListener('click', () => {
+            localStorage.setItem('cookies-aceptadas', 'true');
+            banner.classList.remove('active');
+        });
+    </script>
 </body>
+
 </html>
