@@ -389,3 +389,32 @@ footer {
     font-size: 0.7rem;
     text-transform: uppercase;
 }
+
+.history-page {
+    max-width: 800px;
+    margin: 40px auto;
+    background: var(--gris);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.history-content h1 {
+    color: var(--rojo);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.history-content h2 {
+    margin-top: 30px;
+    color: #fff;
+    border-left: 4px solid var(--rojo);
+    padding-left: 15px;
+}
+
+.history-content p {
+    font-size: 1.1rem;
+    color: #ccc;
+    line-height: 1.8;
+}
