@@ -7,28 +7,29 @@
     <title>Rock Verse 2026 | Noticias y Leyendas</title>
     <link rel="stylesheet" href="estilos.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4442929491919056"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
         <nav>
-    <div class="logo">ROCK<span>VERSE</span></div>
-    <ul class="nav-links">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="noticias.html">Noticias 2026</a></li>
-        <li class="dropdown">
-            <a href="#" class="dropbtn">Categorías ▼</a>
-            <ul class="dropdown-content">
-                <li><a href="thrash.html">Thrash Metal</a></li>
-                <li><a href="power.html">Power Metal</a></li>
-                <li><a href="deathcore.html">Deathcore</a></li>
-                <li><a href="hardrock.html">Hard Rock</a></li>
+            <div class="logo">ROCK<span>VERSE</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Categorías ▼</a>
+                    <ul class="dropdown-content">
+                        <li><a href="thrash.html">Thrash Metal</a></li>
+                        <li><a href="power.html">Power Metal</a></li>
+                        <li><a href="deathcore.html">Deathcore</a></li>
+                        <li><a href="grunge.html">Grunge</a></li>
+                        <li><a href="progresivo.html">Metal Progresivo</a></li>
+                    </ul>
+                </li>
+                <li><a href="historia.html">Historia</a></li>
             </ul>
-        </li>
-        <li><a href="historia.html">Historia</a></li>
-    </ul>
-</nav>
+        </nav>
     </header>
 
     <section id="inicio" class="hero">
@@ -97,6 +98,31 @@
     <footer>
         <p>&copy; 2026 Rock Verse Project - Todos los derechos reservados.</p>
     </footer>
+    <footer>
+    <p>&copy; 2026 Rock Verse | <a href="privacidad.html" style="color:#aaa; text-decoration:none;">Política de Privacidad</a></p>
+</footer>
+<div id="cookie-banner" class="cookie-container">
+    <p>
+        Utilizamos cookies propias y de terceros para mejorar tu experiencia y mostrarte publicidad relacionada con tus gustos rockeros. 
+        Al continuar navegando, aceptas nuestra <a href="privacidad.html">Política de Cookies</a>.
+    </p>
+    <button id="accept-cookies" class="cookie-btn">Aceptar y Rockear</button>
+</div>
+
+<script>
+    const banner = document.getElementById('cookie-banner');
+    const btn = document.getElementById('accept-cookies');
+
+    // Verificar si el usuario ya aceptó las cookies antes
+    if (!localStorage.getItem('cookies-aceptadas')) {
+        banner.classList.add('active');
+    }
+
+    btn.addEventListener('click', () => {
+        localStorage.setItem('cookies-aceptadas', 'true');
+        banner.classList.remove('active');
+    });
+</script>
 </body>
 
 </html>

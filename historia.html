@@ -54,5 +54,30 @@
     <footer>
         <p>&copy; 2026 Rock Verse - Documentando la leyenda.</p>
     </footer>
+    <footer>
+    <p>&copy; 2026 Rock Verse | <a href="privacidad.html" style="color:#aaa; text-decoration:none;">Política de Privacidad</a></p>
+</footer>
+<div id="cookie-banner" class="cookie-container">
+    <p>
+        Utilizamos cookies propias y de terceros para mejorar tu experiencia y mostrarte publicidad relacionada con tus gustos rockeros. 
+        Al continuar navegando, aceptas nuestra <a href="privacidad.html">Política de Cookies</a>.
+    </p>
+    <button id="accept-cookies" class="cookie-btn">Aceptar y Rockear</button>
+</div>
+
+<script>
+    const banner = document.getElementById('cookie-banner');
+    const btn = document.getElementById('accept-cookies');
+
+    // Verificar si el usuario ya aceptó las cookies antes
+    if (!localStorage.getItem('cookies-aceptadas')) {
+        banner.classList.add('active');
+    }
+
+    btn.addEventListener('click', () => {
+        localStorage.setItem('cookies-aceptadas', 'true');
+        banner.classList.remove('active');
+    });
+</script>
 </body>
 </html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Deathcore: Poder Brutal | Rock Verse</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <main>
+        <header class="category-header">
+            <h1>Deathcore: La Nueva Era de la Pesadez</h1>
+            <p>Breakdowns, voces extremas y una producción técnica impecable.</p>
+        </header>
+
+        <section class="band-grid">
+            <div class="band-card">
+                <span class="band-badge">Tendencia</span>
+                <div class="band-image-container">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Lorna_Shore_-_Rock_am_Ring_2023_-_AL0057.jpg/800px-Lorna_Shore.jpg" alt="Lorna Shore">
+                </div>
+                <div class="band-details">
+                    <h3>Lorna Shore</h3>
+                    <p class="band-origin">🇺🇸 EE. UU.</p>
+                    <p>Liderando el género con Will Ramos. Su álbum de 2026 ha sido calificado como una obra maestra sinfónica.</p>
+                    <div class="band-key-song"><strong>Esencial:</strong> To the Hellfire</div>
+                </div>
+            </div>
+
+            <div class="band-card">
+                <span class="band-badge">En Vivo</span>
+                <div class="band-image-container">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Slaughter_to_Prevail_Resurrection_Fest_2023_04.jpg/800px-STP.jpg" alt="Slaughter to Prevail">
+                </div>
+                <div class="band-details">
+                    <h3>Slaughter to Prevail</h3>
+                    <p class="band-origin">🇷🇺 Rusia</p>
+                    <p>Alex Terrible sigue siendo el vocalista más imponente. Su máscara de "Kid of Darkness" es un icono global.</p>
+                    <div class="band-key-song"><strong>Esencial:</strong> Demolisher</div>
+                </div>
+            </div>
+
+            <div class="band-card">
+                <span class="band-badge">Técnico</span>
+                <div class="band-image-container">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Whitechapel_-_Summer_Breeze_2017_03.jpg/800px-Whitechapel.jpg" alt="Whitechapel">
+                </div>
+                <div class="band-details">
+                    <h3>Whitechapel</h3>
+                    <p class="band-origin">🇺🇸 EE. UU.</p>
+                    <p>Evolucionando desde el deathcore puro hacia sonidos más melódicos y conceptuales en su último disco.</p>
+                    <div class="band-key-song"><strong>Esencial:</strong> The Saw Is the Law</div>
+                </div>
+            </div>
+
+            <div class="band-card">
+                <span class="band-badge">Clásicos</span>
+                <div class="band-image-container">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Suicide_Silence_-_With_Full_Force_2014_05.jpg/800px-Suicide_Silence.jpg" alt="Suicide Silence">
+                </div>
+                <div class="band-details">
+                    <h3>Suicide Silence</h3>
+                    <p class="band-origin">🇺🇸 EE. UU.</p>
+                    <p>Los pioneros del género regresan con un sonido que recuerda a sus primeros trabajos en 2026.</p>
+                    <div class="band-key-song"><strong>Esencial:</strong> You Only Live Once</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+    <p>&copy; 2026 Rock Verse | <a href="privacidad.html" style="color:#aaa; text-decoration:none;">Política de Privacidad</a></p>
+</footer>
+<div id="cookie-banner" class="cookie-container">
+    <p>
+        Utilizamos cookies propias y de terceros para mejorar tu experiencia y mostrarte publicidad relacionada con tus gustos rockeros. 
+        Al continuar navegando, aceptas nuestra <a href="privacidad.html">Política de Cookies</a>.
+    </p>
+    <button id="accept-cookies" class="cookie-btn">Aceptar y Rockear</button>
+</div>
+
+<script>
+    const banner = document.getElementById('cookie-banner');
+    const btn = document.getElementById('accept-cookies');
+
+    // Verificar si el usuario ya aceptó las cookies antes
+    if (!localStorage.getItem('cookies-aceptadas')) {
+        banner.classList.add('active');
+    }
+
+    btn.addEventListener('click', () => {
+        localStorage.setItem('cookies-aceptadas', 'true');
+        banner.classList.remove('active');
+    });
+</script>
+</body>
+</html>

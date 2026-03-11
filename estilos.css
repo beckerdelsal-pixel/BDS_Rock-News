@@ -418,3 +418,68 @@ footer {
     color: #ccc;
     line-height: 1.8;
 }
+
+/* =========================================
+   ESTILOS DEL BANNER DE COOKIES
+   ========================================= */
+
+.cookie-container {
+    position: fixed;
+    bottom: -100%; /* Oculto por defecto abajo */
+    left: 0;
+    right: 0;
+    background: #111;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.5);
+    z-index: 9999;
+    transition: 0.5s ease-in-out;
+    border-top: 2px solid var(--rojo);
+}
+
+.cookie-container.active {
+    bottom: 0; /* Se desliza hacia arriba */
+}
+
+.cookie-container p {
+    margin: 0;
+    font-size: 0.9rem;
+    max-width: 80%;
+}
+
+.cookie-container a {
+    color: var(--rojo);
+    text-decoration: underline;
+}
+
+.cookie-btn {
+    background: var(--rojo);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.cookie-btn:hover {
+    background: #b92b36;
+    transform: scale(1.05);
+}
+
+/* Responsividad para móviles */
+@media (max-width: 768px) {
+    .cookie-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .cookie-container p {
+        max-width: 100%;
+    }
+}
