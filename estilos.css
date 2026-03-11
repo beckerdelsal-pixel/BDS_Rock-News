@@ -1,0 +1,391 @@
+:root {
+    --rojo: #e63946;
+    --oscuro: #1a1a1a;
+    --gris: #2d2d2d;
+    --texto: #f1f1f1;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--oscuro);
+    color: var(--texto);
+    margin: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #000;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--rojo);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--rojo);
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+h2 {
+    border-left: 5px solid var(--rojo);
+    padding-left: 15px;
+    margin-top: 3rem;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.news-card {
+    background-color: var(--gris);
+    padding: 20px;
+    border-radius: 8px;
+    border-bottom: 3px solid var(--rojo);
+}
+
+.bands-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.band-page {
+    flex: 1;
+    min-width: 300px;
+    background: #252525;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #000;
+    margin-top: 4rem;
+}
+
+/* Estilos para el Dropdown */
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    background-color: #1a1a1a;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    border-top: 2px solid var(--rojo);
+}
+
+.dropdown-content li a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.dropdown-content li a:hover {
+    background-color: var(--gris);
+    color: var(--rojo);
+}
+
+/* Mostrar al pasar el mouse */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    cursor: pointer;
+}
+
+/* Contenedor principal de la cuadrícula */
+.band-grid {
+    display: grid;
+    /* Crea columnas de al menos 280px, ajustándose automáticamente */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px; /* Espacio entre tarjetas */
+    padding: 20px 0;
+    /* Animación de entrada al cargar la página */
+    animation: fadeInPage 0.8s ease-in-out;
+}
+
+/* Estilo base de la Tarjeta */
+.band-card {
+    background-color: var(--gris);
+    border-radius: 12px;
+    overflow: hidden; /* Mantiene la imagen dentro de los bordes redondeados */
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animación suave y elástica */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    text-decoration: none; /* Si la tarjeta entera es un link */
+    color: inherit;
+}
+
+/* --- EFECTO HOVER (Animación al pasar el mouse) --- */
+.band-card:hover {
+    transform: translateY(-10px) scale(1.02); /* Se eleva y agranda ligeramente */
+    box-shadow: 0 15px 30px rgba(230, 57, 70, 0.4); /* Sombra roja brillante */
+    border-color: var(--rojo);
+}
+
+/* Contenedor de la imagen de la banda */
+.band-image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.band-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    transition: transform 0.6s ease;
+}
+
+/* Efecto de zoom en la imagen al hacer hover en la tarjeta */
+.band-card:hover .band-image-container img {
+    transform: scale(1.1);
+}
+
+/* Etiqueta de género/estado sobre la imagen */
+.band-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--rojo);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 2;
+}
+
+/* Detalles del texto de la tarjeta */
+.band-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.band-details h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.4rem;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.band-origin {
+    font-size: 0.85rem;
+    color: #aaa;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.band-key-song {
+    background-color: rgba(0,0,0,0.3);
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    border-left: 3px solid var(--rojo);
+    margin-top: auto; /* Empuja esto al final del contenedor */
+}
+
+.band-key-song strong {
+    color: var(--rojo);
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+/* Animación de entrada Keyframe */
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ajustes para encabezados de categoría */
+.category-header {
+    text-align: center;
+    padding: 40px 0;
+    background: linear-gradient(180deg, rgba(230,57,70,0.1) 0%, rgba(26,26,26,0) 100%);
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   ESTILOS DE NOTICIAS (ESTILO MAGAZINE)
+   ========================================= */
+
+.news-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    animation: fadeInPage 0.8s ease;
+}
+
+/* Noticia Destacada */
+.news-featured {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--gris);
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: transform 0.3s ease;
+}
+
+.news-featured:hover {
+    transform: scale(1.01);
+}
+
+.news-image {
+    flex: 1 1 500px;
+    height: 400px;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.news-content {
+    flex: 1 1 400px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.news-date {
+    color: var(--rojo);
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.news-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    border-left: none; /* Quitamos el borde lateral del h2 general */
+}
+
+.read-more {
+    margin-top: 20px;
+    color: var(--rojo);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Grilla de noticias secundarias */
+.news-secondary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.news-item {
+    background-color: #222;
+    padding: 25px;
+    border-radius: 10px;
+    border-top: 4px solid var(--rojo);
+    transition: 0.3s;
+}
+
+.news-item:hover {
+    background-color: #282828;
+    transform: translateY(-5px);
+}
+
+.news-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.news-tag {
+    display: inline-block;
+    margin-top: 15px;
+    background: #444;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
