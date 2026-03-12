@@ -2,6 +2,11 @@
 <html lang="es">
 
 <head>
+    <link rel="icon" type="image/png" href="img/logoPagina.png">
+    <link rel="apple-touch-icon" href="img/logoPagina.png">
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=BAArsRDWr9zYqAB3kHuVnc7Eal5l344TkcDoX36CE5MTlnHQiymtwpZsHdSueJpSHtVtOX7RwJoOuzDFpA&components=hosted-buttons&disable-funding=venmo&currency=USD">
+        </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noticias Rock Verse 2026</title>
@@ -14,7 +19,7 @@
 
     <header>
         <nav>
-            <div class="logo">ROCK<span>VERSE</span></div>
+            <div class="logo">ROCK<span><img src="img/logoPagina.png" alt="Rock Verse Logo" style="height: 40px; vertical-align: middle; margin-right: 10px;"><span>VERSE</span></div>
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="noticias.html">Noticias</a></li>
@@ -34,15 +39,15 @@
     </header>
 
     <main>
-        <header class="category-header">
+        <div class="category-title-container">
             <h1>Flash Informativo 2026</h1>
             <p>Últimas novedades del mundo del rock y metal.</p>
-        </header>
+        </div>
 
         <section class="news-container">
             <article class="news-featured">
                 <div class="news-image">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Guns_N%27_Roses_-_London_Stadium_-_Friday_16th_June_2017_GNR_London160617-57_%2834571970224%29.jpg/1200px-GNR.jpg"
+                    <img src="img/guns&roses.png"
                         alt="Guns N Roses">
                 </div>
                 <div class="news-content">
@@ -80,12 +85,25 @@
         </section>
     </main>
 
+    <section class="subscription-section">
+        <div class="premium-card">
+            <h2>🎸 Rockstar Pass 2026</h2>
+            <p>Acceso exclusivo a contenido detrás de cámaras, preventas y noticias sin anuncios.</p>
+            <div class="price">Solo <strong>$4.99 USD</strong>/mes</div>
+            
+            <div id="paypal-container-BRXBUNE2ZZLH6"></div>
+            <script>
+                paypal.HostedButtons({
+                    hostedButtonId: "BRXBUNE2ZZLH6",
+                }).render("#paypal-container-BRXBUNE2ZZLH6")
+            </script>
+            
+            <p style="font-size: 0.7rem; color: #777; margin-top: 15px;">Procesamiento seguro vía Stripe.</p>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2026 Rock Verse - Actualidad al instante.</p>
-    </footer>
-    <footer>
-        <p>&copy; 2026 Rock Verse | <a href="privacidad.html" style="color:#aaa; text-decoration:none;">Política de
-                Privacidad</a></p>
+        <p>&copy; 2026 Rock Verse | <a href="privacidad.html" style="color:var(--rojo); text-decoration:none;">Privacidad</a></p>
     </footer>
     <div id="cookie-banner" class="cookie-container">
         <p>

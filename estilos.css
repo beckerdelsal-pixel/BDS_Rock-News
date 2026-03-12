@@ -13,12 +13,14 @@ body {
     line-height: 1.6;
 }
 
+/* --- AJUSTE DE CAPAS (Para que el menú no se tape) --- */
 header {
     background-color: #000;
     padding: 1rem 0;
     position: sticky;
     top: 0;
-    z-index: 9999;
+    z-index: 10000; /* Asegura que esté sobre TODO */
+    width: 100%;
 }
 
 nav {
@@ -27,6 +29,7 @@ nav {
     align-items: center;
     max-width: 1200px;
     margin: auto;
+    position: relative;
 }
 
 .logo {
@@ -125,15 +128,15 @@ footer {
 }
 
 .dropdown-content {
-    display: none; /* Oculto por defecto */
+    display: none;
     position: absolute;
     background-color: #1a1a1a;
-    min-width: 180px;
+    min-width: 200px;
     box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
-    z-index: 10000;
-    list-style: none;
-    padding: 0;
+    z-index: 10001;
     border-top: 2px solid var(--rojo);
+    top: 100%; /* Se alinea justo debajo del texto */
+    left: 0;
 }
 
 .dropdown-content li a {
@@ -144,11 +147,28 @@ footer {
     font-size: 0.9rem;
 }
 
+.category-title-container {
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--gris);
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1; /* Prioridad baja */
+}
+
 .dropdown-content li a:hover {
     background-color: var(--gris);
     color: var(--rojo);
 }
-
+/* Este es el truco: un área sensible para que no se cierre al bajar el mouse */
+.dropdown::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    bottom: -20px;
+    left: 0;
+}
 /* Mostrar al pasar el mouse */
 .dropdown:hover .dropdown-content {
     display: block;
@@ -482,4 +502,83 @@ footer {
     .cookie-container p {
         max-width: 100%;
     }
+}
+
+
+/* --- DISEÑO RESPONSIVO (PC, Tablet y Celular) --- */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Apila logo y menú en celulares */
+        gap: 15px;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 0.9rem;
+    }
+
+    .band-grid {
+        grid-template-columns: 1fr; /* Una sola columna en celulares */
+        padding: 10px;
+    }
+
+    .news-featured {
+        flex-direction: column;
+    }
+
+    .news-image {
+        height: 250px;
+    }
+}
+
+/* --- ESTILOS SISTEMA DE SUSCRIPCIÓN --- */
+.subscription-section {
+    background: linear-gradient(145deg, #222, #000);
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 3px solid var(--rojo);
+    margin-top: 50px;
+}
+
+.premium-card {
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid var(--rojo);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(230, 57, 70, 0.2);
+}
+
+.btn-pay {
+    display: inline-block;
+    background-color: var(--rojo);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.btn-pay:hover {
+    background-color: #ff4d5a;
+    transform: translateY(-3px);
+}
+
+.logo img {
+    height: 45px; /* Ajusta el tamaño según prefieras */
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: rotate(10deg) scale(1.1); /* Un pequeño efecto rockero al pasar el mouse */
+}
+
+[id^="paypal-button-container"] {
+    margin-top: 20px;
+    min-height: 150px; /* Evita que la tarjeta salte mientras carga el botón */
 }

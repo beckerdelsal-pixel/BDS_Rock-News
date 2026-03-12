@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="icon" type="image/png" href="img/logoPagina.png">
+    <link rel="apple-touch-icon" href="img/logoPagina.png">
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=BAArsRDWr9zYqAB3kHuVnc7Eal5l344TkcDoX36CE5MTlnHQiymtwpZsHdSueJpSHtVtOX7RwJoOuzDFpA&components=hosted-buttons&disable-funding=venmo&currency=USD">
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Metal: Épica y Velocidad | Rock Verse</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">ROCK<span><img src="img/logoPagina.png" alt="Rock Verse Logo"
+                        style="height: 40px; vertical-align: middle; margin-right: 10px;"><span>VERSE</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Categorías ▼</a>
+                    <ul class="dropdown-content">
+                        <li><a href="thrash.html">Thrash Metal</a></li>
+                        <li><a href="power.html">Power Metal</a></li>
+                        <li><a href="deathcore.html">Deathcore</a></li>
+                        <li><a href="grunge.html">Grunge</a></li>
+                        <li><a href="progresivo.html">Metal Progresivo</a></li>
+                    </ul>
+                </li>
+                <li><a href="historia.html">Historia</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="category-title-container">
+            <h1>Power Metal: Himnos de Gloria</h1>
+            <p>Doble bombo, voces agudas y la épica de la fantasía en 2026.</p>
+        </div>
+
+        <section class="band-grid">
+            <div class="band-card">
+                <span class="band-badge">Leyendas</span>
+                <div class="band-image-container">
+                    <img src="img/Helloween.png"
+                        alt="Helloween">
+                </div>
+                <div class="band-details">
+                    <h3>Helloween</h3>
+                    <p class="band-origin">🇩🇪 Alemania</p>
+                    <p>Los padres del género. En 2026 celebran el aniversario de los 'Keepers' con una gira mundial
+                        histórica.</p>
+                    <div class="band-key-song"><strong>Esencial:</strong> I Want Out</div>
+                </div>
+            </div>
+
+            <div class="band-card">
+                <span class="band-badge">Top 1 Chart</span>
+                <div class="band-image-container">
+                    <img src="img/Sabaton.png"
+                        alt="Sabaton">
+                </div>
+                <div class="band-details">
+                    <h3>Sabaton</h3>
+                    <p class="band-origin">🇸🇪 Suecia</p>
+                    <p>Expertos en historia bélica. Su nuevo show incluye escenografía con tanques reales y pirotecnia
+                        masiva.</p>
+                    <div class="band-key-song"><strong>Esencial:</strong> The Last Stand</div>
+                </div>
+            </div>
+
+            <div class="band-card">
+                <span class="band-badge">Misa Metal</span>
+                <div class="band-image-container">
+                    <img src="img/Powerwolf.png"
+                        alt="Powerwolf">
+                </div>
+                <div class="band-details">
+                    <h3>Powerwolf</h3>
+                    <p class="band-origin">🇩🇪 Alemania</p>
+                    <p>El metal estético y religioso. Sus ceremonias en vivo son las más visuales del género
+                        actualmente.</p>
+                    <div class="band-key-song"><strong>Esencial:</strong> We Drink Your Blood</div>
+                </div>
+            </div>
+
+            <div class="band-card">
+                <span class="band-badge">Bardos</span>
+                <div class="band-image-container">
+                    <img src="img/Blind_Guardian.png"
+                        alt="Blind Guardian">
+                </div>
+                <div class="band-details">
+                    <h3>Blind Guardian</h3>
+                    <p class="band-origin">🇩🇪 Alemania</p>
+                    <p>Los maestros de la literatura fantástica. Han anunciado un álbum conceptual basado en nuevas
+                        sagas épicas.</p>
+                    <div class="band-key-song"><strong>Esencial:</strong> Mirror Mirror</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="subscription-premium">
+            <div class="premium-card">
+                <h2>🎸 Rockstar Pass</h2>
+                <p>Acceso exclusivo, noticias sin anuncios y contenido VIP por solo <strong>$4.99 USD/mes</strong></p>
+                <div id="paypal-container-BRXBUNE2ZZLH6"></div>
+                <script>
+                    paypal.HostedButtons({
+                        hostedButtonId: "BRXBUNE2ZZLH6",
+                    }).render("#paypal-container-BRXBUNE2ZZLH6")
+                </script>
+                <p class="small-text">Procesamiento seguro. Cancela en cualquier momento.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Rock Verse | <a href="privacidad.html">Privacidad</a></p>
+    </footer>
+
+    <div id="cookie-banner" class="cookie-container">
+        <p>Utilizamos cookies para mejorar tu experiencia. Al navegar, aceptas nuestra <a
+                href="privacidad.html">política de privacidad</a>.</p>
+        <button id="accept-cookies" class="cookie-btn">Aceptar y Rockear</button>
+    </div>
+
+    <script>
+        const banner = document.getElementById('cookie-banner');
+        const btn = document.getElementById('accept-cookies');
+        if (!localStorage.getItem('cookies-aceptadas')) {
+            banner.classList.add('active');
+        }
+        btn.addEventListener('click', () => {
+            localStorage.setItem('cookies-aceptadas', 'true');
+            banner.classList.remove('active');
+        });
+    </script>
+</body>
+
+</html>
