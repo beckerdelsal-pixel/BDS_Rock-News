@@ -46,8 +46,7 @@
             <div class="band-card">
                 <span class="band-badge">Leyendas</span>
                 <div class="band-image-container">
-                    <img src="img/Helloween.png"
-                        alt="Helloween">
+                    <img src="img/Helloween.png" alt="Helloween">
                 </div>
                 <div class="band-details">
                     <h3>Helloween</h3>
@@ -61,8 +60,7 @@
             <div class="band-card">
                 <span class="band-badge">Top 1 Chart</span>
                 <div class="band-image-container">
-                    <img src="img/Sabaton.png"
-                        alt="Sabaton">
+                    <img src="img/Sabaton.png" alt="Sabaton">
                 </div>
                 <div class="band-details">
                     <h3>Sabaton</h3>
@@ -76,8 +74,7 @@
             <div class="band-card">
                 <span class="band-badge">Misa Metal</span>
                 <div class="band-image-container">
-                    <img src="img/Powerwolf.png"
-                        alt="Powerwolf">
+                    <img src="img/Powerwolf.png" alt="Powerwolf">
                 </div>
                 <div class="band-details">
                     <h3>Powerwolf</h3>
@@ -91,8 +88,7 @@
             <div class="band-card">
                 <span class="band-badge">Bardos</span>
                 <div class="band-image-container">
-                    <img src="img/Blind_Guardian.png"
-                        alt="Blind Guardian">
+                    <img src="img/Blind_Guardian.png" alt="Blind Guardian">
                 </div>
                 <div class="band-details">
                     <h3>Blind Guardian</h3>
@@ -112,6 +108,14 @@
                 <script>
                     paypal.HostedButtons({
                         hostedButtonId: "BRXBUNE2ZZLH6",
+                        onApprove: function (data, actions) {
+                            console.log("Pago exitoso:", data);
+                            window.location.href = "gracias.html";
+                        },
+                        // Opcional: por si el usuario cancela o hay un error
+                        onCancel: function (data) {
+                            console.log("Pago cancelado");
+                        }
                     }).render("#paypal-container-BRXBUNE2ZZLH6")
                 </script>
                 <p class="small-text">Procesamiento seguro. Cancela en cualquier momento.</p>

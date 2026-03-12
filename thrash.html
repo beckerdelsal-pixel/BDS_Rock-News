@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <link rel="icon" type="image/png" href="img/logoPagina.png">
     <link rel="apple-touch-icon" href="img/logoPagina.png">
@@ -11,13 +12,15 @@
     <title>Thrash Metal Global 2026 | Rock Verse</title>
     <link rel="stylesheet" href="estilos.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4442929491919056"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
 </head>
+
 <body>
-    
+
     <header>
         <nav>
-            <div class="logo">ROCK<span><img src="img/logoPagina.png" alt="Rock Verse Logo" style="height: 40px; vertical-align: middle; margin-right: 10px;"><span>VERSE</span></div>
+            <div class="logo">ROCK<span><img src="img/logoPagina.png" alt="Rock Verse Logo"
+                        style="height: 40px; vertical-align: middle; margin-right: 10px;"><span>VERSE</span></div>
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="noticias.html">Noticias</a></li>
@@ -43,7 +46,7 @@
         </div>
 
         <section class="band-grid">
-            
+
             <div class="band-card">
                 <span class="band-badge">Gira Activa</span>
                 <div class="band-image-container">
@@ -52,7 +55,8 @@
                 <div class="band-details">
                     <h3>Metallica</h3>
                     <p class="band-origin">🇺🇸 EE. UU. | Formados en 1981</p>
-                    <p class="band-description">Iconos globales del metal. Continúan su exitosa gira mundial M72 en 2026 con un show visual inigualable.</p>
+                    <p class="band-description">Iconos globales del metal. Continúan su exitosa gira mundial M72 en 2026
+                        con un show visual inigualable.</p>
                     <div class="band-key-song">
                         <strong>Canción Esencial</strong>
                         Master of Puppets
@@ -68,7 +72,8 @@
                 <div class="band-details">
                     <h3>Megadeth</h3>
                     <p class="band-origin">🇺🇸 EE. UU. | Formados en 1983</p>
-                    <p class="band-description">Liderados por Dave Mustaine, la banda está en el estudio grabando la continuación de 'The Sick, the Dying... and the Dead!'.</p>
+                    <p class="band-description">Liderados por Dave Mustaine, la banda está en el estudio grabando la
+                        continuación de 'The Sick, the Dying... and the Dead!'.</p>
                     <div class="band-key-song">
                         <strong>Canción Esencial</strong>
                         Holy Wars... The Punishment Due
@@ -84,7 +89,8 @@
                 <div class="band-details">
                     <h3>Kreator</h3>
                     <p class="band-origin">🇩🇪 Alemania | Formados en 1982</p>
-                    <p class="band-description">Pilares del Thrash Teutónico. Confirmados como cabezas de cartel para los festivales más grandes de Europa en el verano de 2026.</p>
+                    <p class="band-description">Pilares del Thrash Teutónico. Confirmados como cabezas de cartel para
+                        los festivales más grandes de Europa en el verano de 2026.</p>
                     <div class="band-key-song">
                         <strong>Canción Esencial</strong>
                         Pleasure to Kill
@@ -100,7 +106,8 @@
                 <div class="band-details">
                     <h3>Sepultura</h3>
                     <p class="band-origin">🇧🇷 Brasil | Formados en 1984</p>
-                    <p class="band-description">La leyenda brasileña se despide de los escenarios este año con su gira 'Celebrating Life Through Death'.</p>
+                    <p class="band-description">La leyenda brasileña se despide de los escenarios este año con su gira
+                        'Celebrating Life Through Death'.</p>
                     <div class="band-key-song">
                         <strong>Canción Esencial</strong>
                         Roots Bloody Roots
@@ -116,42 +123,53 @@
             <h2>🎸 Rockstar Pass 2026</h2>
             <p>Acceso exclusivo a contenido detrás de cámaras, preventas y noticias sin anuncios.</p>
             <div class="price">Solo <strong>$4.99 USD</strong>/mes</div>
-            
+
             <div id="paypal-container-BRXBUNE2ZZLH6"></div>
             <script>
                 paypal.HostedButtons({
                     hostedButtonId: "BRXBUNE2ZZLH6",
+                    onApprove: function (data, actions) {
+                        console.log("Pago exitoso:", data);
+                        window.location.href = "gracias.html";
+                    },
+                    // Opcional: por si el usuario cancela o hay un error
+                    onCancel: function (data) {
+                        console.log("Pago cancelado");
+                    }
                 }).render("#paypal-container-BRXBUNE2ZZLH6")
             </script>
-            
+
             <p style="font-size: 0.7rem; color: #777; margin-top: 15px;">Procesamiento seguro vía Stripe.</p>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Rock Verse | <a href="privacidad.html" style="color:var(--rojo); text-decoration:none;">Privacidad</a></p>
+        <p>&copy; 2026 Rock Verse | <a href="privacidad.html"
+                style="color:var(--rojo); text-decoration:none;">Privacidad</a></p>
     </footer>
-<div id="cookie-banner" class="cookie-container">
-    <p>
-        Utilizamos cookies propias y de terceros para mejorar tu experiencia y mostrarte publicidad relacionada con tus gustos rockeros. 
-        Al continuar navegando, aceptas nuestra <a href="privacidad.html">Política de Cookies</a>.
-    </p>
-    <button id="accept-cookies" class="cookie-btn">Aceptar y Rockear</button>
-</div>
+    <div id="cookie-banner" class="cookie-container">
+        <p>
+            Utilizamos cookies propias y de terceros para mejorar tu experiencia y mostrarte publicidad relacionada con
+            tus gustos rockeros.
+            Al continuar navegando, aceptas nuestra <a href="privacidad.html">Política de Cookies</a>.
+        </p>
+        <button id="accept-cookies" class="cookie-btn">Aceptar y Rockear</button>
+    </div>
 
-<script>
-    const banner = document.getElementById('cookie-banner');
-    const btn = document.getElementById('accept-cookies');
+    <script>
+        const banner = document.getElementById('cookie-banner');
+        const btn = document.getElementById('accept-cookies');
 
-    // Verificar si el usuario ya aceptó las cookies antes
-    if (!localStorage.getItem('cookies-aceptadas')) {
-        banner.classList.add('active');
-    }
+        // Verificar si el usuario ya aceptó las cookies antes
+        if (!localStorage.getItem('cookies-aceptadas')) {
+            banner.classList.add('active');
+        }
 
-    btn.addEventListener('click', () => {
-        localStorage.setItem('cookies-aceptadas', 'true');
-        banner.classList.remove('active');
-    });
-</script>
+        btn.addEventListener('click', () => {
+            localStorage.setItem('cookies-aceptadas', 'true');
+            banner.classList.remove('active');
+        });
+    </script>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <link rel="icon" type="image/png" href="img/logoPagina.png">
     <link rel="apple-touch-icon" href="img/logoPagina.png">
@@ -10,10 +11,12 @@
     <title>Historia del Rock: De los 50s a 2026 | Rock Verse</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
     <header>
         <nav>
-            <div class="logo">ROCK<span><img src="img/logoPagina.png" alt="Rock Verse Logo" style="height: 40px; vertical-align: middle; margin-right: 10px;"><span>VERSE</span></div>
+            <div class="logo">ROCK<span><img src="img/logoPagina.png" alt="Rock Verse Logo"
+                        style="height: 40px; vertical-align: middle; margin-right: 10px;"><span>VERSE</span></div>
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="noticias.html">Noticias</a></li>
@@ -35,25 +38,32 @@
     <main class="history-page">
         <article class="history-content">
             <h1>La Evolución del Rock: Un Viaje de Rebeldía</h1>
-            
+
             <section>
                 <h2>1. El Nacimiento (Años 50)</h2>
-                <p>Todo comenzó con la fusión del Blues, el Country y el Gospel. Figuras como Elvis Presley y Chuck Berry electrificaron el ritmo, creando una brecha generacional que cambiaría la música para siempre.</p>
+                <p>Todo comenzó con la fusión del Blues, el Country y el Gospel. Figuras como Elvis Presley y Chuck
+                    Berry electrificaron el ritmo, creando una brecha generacional que cambiaría la música para siempre.
+                </p>
             </section>
 
             <section>
                 <h2>2. La Invasión Británica y la Psicodelia (60s)</h2>
-                <p>The Beatles y The Rolling Stones redefinieron el éxito masivo. Hacia finales de la década, la experimentación con sonidos psicodélicos dio paso a bandas como Pink Floyd y Led Zeppelin.</p>
+                <p>The Beatles y The Rolling Stones redefinieron el éxito masivo. Hacia finales de la década, la
+                    experimentación con sonidos psicodélicos dio paso a bandas como Pink Floyd y Led Zeppelin.</p>
             </section>
 
             <section>
                 <h2>3. El Surgimiento del Metal y el Punk (70s - 80s)</h2>
-                <p>Black Sabbath sentó las bases del sonido pesado. Mientras tanto, el Punk de los Sex Pistols recordaba al mundo que el rock era crudo y directo. En los 80, el Thrash Metal de Metallica y Megadeth llevó la velocidad al límite.</p>
+                <p>Black Sabbath sentó las bases del sonido pesado. Mientras tanto, el Punk de los Sex Pistols recordaba
+                    al mundo que el rock era crudo y directo. En los 80, el Thrash Metal de Metallica y Megadeth llevó
+                    la velocidad al límite.</p>
             </section>
 
             <section>
                 <h2>4. El Rock en la Era Digital (2020 - 2026)</h2>
-                <p>Hoy, en 2026, el rock ha absorbido elementos de la producción moderna sin perder su alma. Bandas clásicas conviven con nuevos exponentes del Deathcore y el Metal Progresivo, demostrando que la distorsión sigue siendo el lenguaje universal de la emoción humana.</p>
+                <p>Hoy, en 2026, el rock ha absorbido elementos de la producción moderna sin perder su alma. Bandas
+                    clásicas conviven con nuevos exponentes del Deathcore y el Metal Progresivo, demostrando que la
+                    distorsión sigue siendo el lenguaje universal de la emoción humana.</p>
             </section>
         </article>
     </main>
@@ -63,42 +73,53 @@
             <h2>🎸 Rockstar Pass 2026</h2>
             <p>Acceso exclusivo a contenido detrás de cámaras, preventas y noticias sin anuncios.</p>
             <div class="price">Solo <strong>$4.99 USD</strong>/mes</div>
-            
+
             <div id="paypal-container-BRXBUNE2ZZLH6"></div>
             <script>
                 paypal.HostedButtons({
                     hostedButtonId: "BRXBUNE2ZZLH6",
+                    onApprove: function (data, actions) {
+                        console.log("Pago exitoso:", data);
+                        window.location.href = "gracias.html";
+                    },
+                    // Opcional: por si el usuario cancela o hay un error
+                    onCancel: function (data) {
+                        console.log("Pago cancelado");
+                    }
                 }).render("#paypal-container-BRXBUNE2ZZLH6")
             </script>
-            
+
             <p style="font-size: 0.7rem; color: #777; margin-top: 15px;">Procesamiento seguro vía Stripe.</p>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Rock Verse | <a href="privacidad.html" style="color:var(--rojo); text-decoration:none;">Privacidad</a></p>
+        <p>&copy; 2026 Rock Verse | <a href="privacidad.html"
+                style="color:var(--rojo); text-decoration:none;">Privacidad</a></p>
     </footer>
-<div id="cookie-banner" class="cookie-container">
-    <p>
-        Utilizamos cookies propias y de terceros para mejorar tu experiencia y mostrarte publicidad relacionada con tus gustos rockeros. 
-        Al continuar navegando, aceptas nuestra <a href="privacidad.html">Política de Cookies</a>.
-    </p>
-    <button id="accept-cookies" class="cookie-btn">Aceptar y Rockear</button>
-</div>
+    <div id="cookie-banner" class="cookie-container">
+        <p>
+            Utilizamos cookies propias y de terceros para mejorar tu experiencia y mostrarte publicidad relacionada con
+            tus gustos rockeros.
+            Al continuar navegando, aceptas nuestra <a href="privacidad.html">Política de Cookies</a>.
+        </p>
+        <button id="accept-cookies" class="cookie-btn">Aceptar y Rockear</button>
+    </div>
 
-<script>
-    const banner = document.getElementById('cookie-banner');
-    const btn = document.getElementById('accept-cookies');
+    <script>
+        const banner = document.getElementById('cookie-banner');
+        const btn = document.getElementById('accept-cookies');
 
-    // Verificar si el usuario ya aceptó las cookies antes
-    if (!localStorage.getItem('cookies-aceptadas')) {
-        banner.classList.add('active');
-    }
+        // Verificar si el usuario ya aceptó las cookies antes
+        if (!localStorage.getItem('cookies-aceptadas')) {
+            banner.classList.add('active');
+        }
 
-    btn.addEventListener('click', () => {
-        localStorage.setItem('cookies-aceptadas', 'true');
-        banner.classList.remove('active');
-    });
-</script>
+        btn.addEventListener('click', () => {
+            localStorage.setItem('cookies-aceptadas', 'true');
+            banner.classList.remove('active');
+        });
+    </script>
 </body>
+
 </html>

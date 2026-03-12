@@ -95,6 +95,14 @@
             <script>
                 paypal.HostedButtons({
                     hostedButtonId: "BRXBUNE2ZZLH6",
+                    onApprove: function (data, actions) {
+                        console.log("Pago exitoso:", data);
+                        window.location.href = "gracias.html";
+                    },
+                    // Opcional: por si el usuario cancela o hay un error
+                    onCancel: function (data) {
+                        console.log("Pago cancelado");
+                    }
                 }).render("#paypal-container-BRXBUNE2ZZLH6")
             </script>
             
