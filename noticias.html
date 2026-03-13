@@ -19,7 +19,8 @@
 
     <header>
         <nav>
-            <div class="logo">ROCK<span><img src="img/logoPagina.png" alt="Rock Verse Logo" style="height: 40px; vertical-align: middle; margin-right: 10px;"><span>VERSE</span></div>
+            <div class="logo">ROCK<span><img src="img/logoPagina.png" alt="Rock Verse Logo"
+                        style="height: 40px; vertical-align: middle; margin-right: 10px;"><span>VERSE</span></div>
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="noticias.html">Noticias</a></li>
@@ -38,6 +39,37 @@
         </nav>
     </header>
 
+    <main class="container" style="padding: 40px 20px;">
+        <h1 style="color: var(--rojo); margin-bottom: 40px;">Crónicas del Metal: Noticias 2026</h1>
+
+        <div style="display: grid; gap: 30px;">
+            <article
+                style="background: var(--gris); padding: 25px; border-radius: 10px; border-left: 4px solid var(--rojo);">
+                <span style="color: var(--rojo); font-weight: bold;">Lanzamientos</span>
+                <h2 style="margin: 10px 0;">Lorna Shore anuncia gira por Latinoamérica</h2>
+                <p>La banda referente del Deathcore moderno ha confirmado fechas para el último trimestre de 2026. Se
+                    rumorea que Guayaquil podría ser una de las sedes para el cierre de su gira "Pain Remains Part III".
+                </p>
+            </article>
+
+            <article
+                style="background: var(--gris); padding: 25px; border-radius: 10px; border-left: 4px solid var(--rojo);">
+                <span style="color: var(--rojo); font-weight: bold;">Festivales</span>
+                <h2 style="margin: 10px 0;">Wacken Open Air 2026: Sold Out en tiempo récord</h2>
+                <p>El festival más grande del mundo agota sus entradas en menos de 2 horas. Rock Verse tendrá cobertura
+                    especial desde Alemania para traerte los mejores momentos del Main Stage.</p>
+            </article>
+
+            <article
+                style="background: var(--gris); padding: 25px; border-radius: 10px; border-left: 4px solid var(--rojo);">
+                <span style="color: var(--rojo); font-weight: bold;">Cultura</span>
+                <h2 style="margin: 10px 0;">El vinilo supera al streaming en ventas de Metal Progresivo</h2>
+                <p>Un estudio reciente revela que los fans del progresivo prefieren el formato físico por la complejidad
+                    del arte visual y la fidelidad sonora de las grabaciones analógicas.</p>
+            </article>
+        </div>
+    </main>
+
     <main>
         <div class="category-title-container">
             <h1>Flash Informativo 2026</h1>
@@ -47,8 +79,7 @@
         <section class="news-container">
             <article class="news-featured">
                 <div class="news-image">
-                    <img src="img/guns&roses.png"
-                        alt="Guns N Roses">
+                    <img src="img/guns&roses.png" alt="Guns N Roses">
                 </div>
                 <div class="news-content">
                     <span class="news-date">11 de Marzo, 2026</span>
@@ -90,7 +121,7 @@
             <h2>🎸 Rockstar Pass 2026</h2>
             <p>Acceso exclusivo a contenido detrás de cámaras, preventas y noticias sin anuncios.</p>
             <div class="price">Solo <strong>$4.99 USD</strong>/mes</div>
-            
+
             <div id="paypal-container-BRXBUNE2ZZLH6"></div>
             <script>
                 paypal.HostedButtons({
@@ -105,13 +136,39 @@
                     }
                 }).render("#paypal-container-BRXBUNE2ZZLH6")
             </script>
-            
-            <p style="font-size: 0.7rem; color: #777; margin-top: 15px;">Procesamiento seguro vía Stripe.</p>
+
+            <p style="font-size: 0.7rem; color: #777; margin-top: 15px;">Procesamiento seguro vía PayPal.</p>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Rock Verse | <a href="privacidad.html" style="color:var(--rojo); text-decoration:none;">Privacidad</a></p>
+        <div class="container"
+            style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; padding-bottom: 30px;">
+            <div style="flex: 1; min-width: 250px;">
+                <div class="logo">ROCK<span>VERSE</span></div>
+                <p style="color: #888; margin-top: 15px;">Tu dosis diaria de distorsión y cultura rockera directamente
+                    desde Guayaquil al mundo.</p>
+            </div>
+            <div style="flex: 1; min-width: 150px;">
+                <h4 style="color: var(--rojo);">Explorar</h4>
+                <ul style="list-style: none; padding: 0; line-height: 2;">
+                    <li><a href="index.html" style="color: #ccc; text-decoration: none;">Inicio</a></li>
+                    <li><a href="noticias.html" style="color: #ccc; text-decoration: none;">Noticias</a></li>
+                    <li><a href="historia.html" style="color: #ccc; text-decoration: none;">Historia</a></li>
+                </ul>
+            </div>
+            <div style="flex: 1; min-width: 150px;">
+                <h4 style="color: var(--rojo);">Legal</h4>
+                <ul style="list-style: none; padding: 0; line-height: 2;">
+                    <li><a href="privacidad.html" style="color: #ccc; text-decoration: none;">Privacidad</a></li>
+                    <li><a href="nosotros.html" style="color: #ccc; text-decoration: none;">Nosotros</a></li>
+                    <li><a href="contacto.html" style="color: #ccc; text-decoration: none;">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; border-top: 1px solid #333; padding-top: 20px;">
+            <p style="font-size: 0.8rem; color: #666;">&copy; 2026 Rock Verse | Diseñado para la comunidad Rockstar.</p>
+        </div>
     </footer>
     <div id="cookie-banner" class="cookie-container">
         <p>
